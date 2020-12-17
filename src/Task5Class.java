@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class FifthTaskClass {
+public class Task5Class {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         int x, y, res;

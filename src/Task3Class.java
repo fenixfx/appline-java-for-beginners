@@ -1,4 +1,4 @@
-public class ThirdTaskClass {
+public class Task3Class {
     public static void main(String[] args){
         int[] nums = {1, 3, 5, 7, 9};
         int tmp = nums[0];
