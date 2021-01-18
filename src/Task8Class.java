@@ -7,11 +7,15 @@ public class Task8Class {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите целое положительное число:");
         lim = scan.nextInt();
-        sum += 1;
-        while (i + 2 <= lim){
-            i += 2;
-            sum += i;
+        if (lim > 0) {
+            sum += 1;
+            while (i + 2 <= lim){
+                i += 2;
+                sum += i;
+            }
+            System.out.print("Сумма всех нечетных чисел: " + sum);
+        } else {
+            System.out.print("Введено некорректное число");
         }
-        System.out.print("Сумма всех нечетных чисел: " + sum);
     }
 }
