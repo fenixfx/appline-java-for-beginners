@@ -2,6 +2,20 @@ import javax.sound.midi.SysexMessage;
 import java.util.Scanner;
 
 public class Task6Class {
+    public static int MILE_METER_COEFF = 1609;
+    public static int FOOT_MILE_COEFF = 5280;
+    public static int YARD_MILE_COEFF = 1760;
+    public static int YARD_FOOT_COEFF = 3;
+    public static double YARD_METER_COEFF = 1.094;
+    public static double FOOT_METER_COEFF = 3.281;
+
+    public static double KILO_POUND_COEFF = 2.205;
+    public static double KILO_STONE_COEFF = 6.35;
+    public static double KILO_UNCIA_COEFF = 35.274;
+    public static int STONE_POUND_COEFF = 14;
+    public static int STONE_UNCIA_COEFF = 224;
+    public static int UNCIA_POUND_COEFF = 16;
+
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         int type, size;
@@ -26,32 +40,33 @@ public class Task6Class {
             default:
                 System.out.println("Выбрана некорректная величина");
         }
+        scan.close();
     }
 
     public static void distFun(int size, float value){
         switch (size){
             case 1:
                 System.out.println("Метры: " + value);
-                System.out.println("Мили: " + value / 1609);
-                System.out.println("Ярды: " + value * 1.094);
-                System.out.println("Футы: " + value * 3.281);
+                System.out.println("Мили: " + value / MILE_METER_COEFF);
+                System.out.println("Ярды: " + value * YARD_METER_COEFF);
+                System.out.println("Футы: " + value * FOOT_METER_COEFF);
                 break;
             case 2:
-                System.out.println("Метры: " + value * 1609);
+                System.out.println("Метры: " + value * MILE_METER_COEFF);
                 System.out.println("Мили: " + value);
-                System.out.println("Ярды: " + value * 1760);
-                System.out.println("Футы: " + value * 5280);
+                System.out.println("Ярды: " + value * YARD_MILE_COEFF);
+                System.out.println("Футы: " + value * FOOT_MILE_COEFF);
                 break;
             case 3:
-                System.out.println("Метры: " + value / 1.094);
-                System.out.println("Мили: " + value / 1760);
+                System.out.println("Метры: " + value / YARD_METER_COEFF);
+                System.out.println("Мили: " + value / YARD_MILE_COEFF);
                 System.out.println("Ярды: " + value);
-                System.out.println("Футы: " + value / 3);
+                System.out.println("Футы: " + value / YARD_FOOT_COEFF);
                 break;
             case 4:
-                System.out.println("Метры: " + value / 3.281);
-                System.out.println("Мили: " + value / 5280);
-                System.out.println("Ярды: " + value / 3);
+                System.out.println("Метры: " + value / FOOT_METER_COEFF);
+                System.out.println("Мили: " + value / FOOT_MILE_COEFF);
+                System.out.println("Ярды: " + value / YARD_FOOT_COEFF);
                 System.out.println("Футы: " + value);
                 break;
             default:
@@ -63,26 +78,26 @@ public class Task6Class {
         switch (size){
             case 1:
                 System.out.println("Килограммы: " + value);
-                System.out.println("Фунты: " + value * 2.205);
-                System.out.println("Стоны: " + value / 6.35);
-                System.out.println("Унции: " + value * 35.274);
+                System.out.println("Фунты: " + value * KILO_POUND_COEFF);
+                System.out.println("Стоны: " + value / KILO_STONE_COEFF);
+                System.out.println("Унции: " + value * KILO_UNCIA_COEFF);
                 break;
             case 2:
-                System.out.println("Килограммы: " + value / 2.205);
+                System.out.println("Килограммы: " + value / KILO_POUND_COEFF);
                 System.out.println("Фунты: " + value);
-                System.out.println("Стоны: " + value / 14);
-                System.out.println("Унции: " + value * 16);
+                System.out.println("Стоны: " + value / STONE_POUND_COEFF);
+                System.out.println("Унции: " + value * UNCIA_POUND_COEFF);
                 break;
             case 3:
-                System.out.println("Килограммы: " + value * 6.35);
-                System.out.println("Фунты: " + value * 14);
+                System.out.println("Килограммы: " + value * KILO_STONE_COEFF);
+                System.out.println("Фунты: " + value * STONE_POUND_COEFF);
                 System.out.println("Стоны: " + value);
-                System.out.println("Унции: " + value * 224);
+                System.out.println("Унции: " + value * STONE_UNCIA_COEFF);
                 break;
             case 4:
-                System.out.println("Килограммы: " + value / 35.274);
-                System.out.println("Фунты: " + value / 16);
-                System.out.println("Стоны: " + value / 224);
+                System.out.println("Килограммы: " + value / KILO_UNCIA_COEFF);
+                System.out.println("Фунты: " + value / UNCIA_POUND_COEFF);
+                System.out.println("Стоны: " + value / STONE_UNCIA_COEFF);
                 System.out.println("Унции: " + value);
                 break;
             default:

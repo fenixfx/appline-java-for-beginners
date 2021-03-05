@@ -10,5 +10,6 @@ public class Task4Class {
         int res = (x + y + z) / 3;
         String answer = res > 3 ? res + "\nПрограмма выполнена корректно" : "" + res;
         System.out.println(answer);
+        scan.close();
     }
 }

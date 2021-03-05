@@ -22,5 +22,6 @@ public class Task10Class {
         } else {
             System.out.println("Введено некорректное число");
         }
+        scan.close();
     }
 }

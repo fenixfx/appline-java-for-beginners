@@ -21,6 +21,7 @@ public class Task9Class {
         } else {
             System.out.println("Введено некорректное число");
         }
+        scan.close();
     }
 
     public static double calcNumListAverage(double[] numbersList) {

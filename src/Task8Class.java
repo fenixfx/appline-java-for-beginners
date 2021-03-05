@@ -17,5 +17,6 @@ public class Task8Class {
         } else {
             System.out.print("Введено некорректное число");
         }
+        scan.close();
     }
 }

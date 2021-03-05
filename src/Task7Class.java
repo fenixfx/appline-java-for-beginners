@@ -18,5 +18,6 @@ public class Task7Class {
                 arr[i] = inp;
             }
         }
+        scan.close();
     }
 }
