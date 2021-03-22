@@ -8,12 +8,12 @@ public class Task14Class {
         for (int i = 0; i < rand_val_arr.length; i++) {
             rand_val_arr[i] = rand.nextInt(41) - 20;
         }
-        System.out.println("Минимальный элемент массива: " + get_arr_min_max_abs(rand_val_arr)[0]);
-        System.out.println("Максимальный элемент массива: " + get_arr_min_max_abs(rand_val_arr)[1]);
-        System.out.println("Наибольшее значение по модулю: " + get_arr_min_max_abs(rand_val_arr)[2]);
+        System.out.println("Минимальный элемент массива: " + getArrMinMaxAbs(rand_val_arr)[0]);
+        System.out.println("Максимальный элемент массива: " + getArrMinMaxAbs(rand_val_arr)[1]);
+        System.out.println("Наибольшее значение по модулю: " + getArrMinMaxAbs(rand_val_arr)[2]);
     }
 
-    public static int[] get_arr_min_max_abs(int[] inp_arr){
+    public static int[] getArrMinMaxAbs(int[] inp_arr){
         int max_val = inp_arr[0];
         int min_val = inp_arr[0];
         int abs_max;
