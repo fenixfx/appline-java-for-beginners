@@ -12,5 +12,6 @@ public class SummaryTask1 {
 
         System.out.println("Введите сумму:");
         System.out.print("Итого: " + cust_format.format(scan.nextFloat() / usd_rate) + " долларов");
+        scan.close();
     }
 }

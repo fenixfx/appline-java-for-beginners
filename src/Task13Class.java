@@ -6,6 +6,7 @@ public class Task13Class {
 
         System.out.println("Введите строку:");
         String input_string = scan.nextLine();
+        scan.close();
         int latin_word_counter = 0;
 
         for (String word:input_string.split(" ")) {
